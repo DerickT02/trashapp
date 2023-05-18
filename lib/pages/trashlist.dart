@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trashapp/pages/createtrash.dart';
 
 
 class TrashItem{
@@ -27,7 +28,14 @@ class _TrashListState extends State<TrashList> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Trash List"),
-      )
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+        Navigator.push(context, MaterialPageRoute(builder: (context) => CreateTrash()));
+        },
+        child: const Icon(Icons.add),
+      
+      ),
     );
   }
 }
